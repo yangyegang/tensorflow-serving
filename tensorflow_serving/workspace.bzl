@@ -83,7 +83,7 @@ def tf_serving_workspace():
     
     http_archive(
         name = "recommenders_addons",
-        strip_prefix = "recommenders-addons-0.2.0",
+        strip_prefix = "recommenders-addons-0.6.0",
         url = "https://github.com/tensorflow/recommenders-addons/archive/refs/tags/v0.6.0.zip",
         sha256 = "764da54debaa3158379ba6e13e5fbdc084fc3379bce8becdd9b73237eedcec20"
     )
