@@ -47,3 +47,9 @@ workspace()
 load("@rules_pkg//:deps.bzl", "rules_pkg_dependencies")
 rules_pkg_dependencies()
 
+load("@recommenders_addons//build_deps/tf_dependency:tf_configure.bzl", "tf_configure")
+load("@recommenders_addons//build_deps/toolchains/gpu:cuda_configure.bzl", "cuda_configure")
+
+tf_configure(name = "local_config_tf")
+cuda_configure(name = "local_config_cuda")
+
