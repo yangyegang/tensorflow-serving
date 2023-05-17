@@ -80,3 +80,32 @@ def tf_serving_workspace():
             "https://github.com/google/glog/archive/028d37889a1e80e8a07da1b8945ac706259e5fd8.tar.gz",
         ],
     )
+    
+    http_archive(
+        name = "recommenders_addons",
+        strip_prefix = "recommenders-addons-0.2.0",
+        url = "https://github.com/tensorflow/recommenders-addons/archive/refs/tags/v0.6.0.zip",
+        sha256 = "764da54debaa3158379ba6e13e5fbdc084fc3379bce8becdd9b73237eedcec20"
+    )
+
+    http_archive(
+        name = "cub_archive",
+        build_file = "//build_deps/toolchains/gpu:cub.BUILD",
+        sha256 = "6bfa06ab52a650ae7ee6963143a0bbc667d6504822cbd9670369b598f18c58c3",
+        strip_prefix = "cub-1.8.0",
+        urls = [
+            "https://storage.googleapis.com/mirror.tensorflow.org/github.com/NVlabs/cub/archive/1.8.0.zip",
+            "https://github.com/NVlabs/cub/archive/1.8.0.zip",
+        ],
+    )
+
+    http_archive(
+        name = "sparsehash_c11",
+        build_file = "//third_party:sparsehash_c11.BUILD",
+        sha256 = "d4a43cad1e27646ff0ef3a8ce3e18540dbcb1fdec6cc1d1cb9b5095a9ca2a755",
+        strip_prefix = "sparsehash-c11-2.11.1",
+        urls = [
+            "https://github.com/sparsehash/sparsehash-c11/archive/v2.11.1.tar.gz",
+        ],
+    )
+
